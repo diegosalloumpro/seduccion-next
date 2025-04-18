@@ -45,7 +45,7 @@ export default function HomePage() {
     setPoints(savedProgress.points);
     setLastMessage(savedProgress.lastMessage);
 
-    // **SALUDO INICIAL DEL ASISTENTE COMENTADO PARA QUE NO ESCRIBA PRIMERO**
+    // **SALUDO INICIAL DEL ASISTENTE ELIMINADO PARA QUE NO ESCRIBA PRIMERO**
     // const greetings = [
     //   "Hola 😊",
     //   "¡Hola! ¿Cómo estás?",

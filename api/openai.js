@@ -26,18 +26,20 @@ let conversationHistory = [
   }
 ];
 
-const getRandomGreeting = () => {
-  return "¡Hola! Qué ganas de charlar un rato.";
-};
+// **ELIMINAMOS LA FUNCIÓN getRandomGreeting**
+// const getRandomGreeting = () => {
+//   return "¡Hola! Qué ganas de charlar un rato.";
+// };
 
 export const getOpenAIResponse = async (userMessage) => {
-  if (conversationHistory.length === 1) {
-    const randomGreeting = getRandomGreeting();
-    conversationHistory.push({ role: 'assistant', content: randomGreeting });
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(randomGreeting), 1000);
-    });
-  }
+  // **ELIMINAMOS LA LÓGICA DEL SALUDO INICIAL AUTOMÁTICO**
+  // if (conversationHistory.length === 1) {
+  //   const randomGreeting = getRandomGreeting();
+  //   conversationHistory.push({ role: 'assistant', content: randomGreeting });
+  //   return new Promise((resolve) => {
+  //     setTimeout(() => resolve(randomGreeting), 1000);
+  //   });
+  // }
 
   conversationHistory.push({ role: 'user', content: userMessage });
 
@@ -89,5 +91,5 @@ export const getOpenAIResponse = async (userMessage) => {
 
 // Función para resetear la conversación
 export const resetConversation = () => {
-  conversationHistory = [conversationHistory[0]];  // Reinicia solo al primer mensaje (el de system)
+  conversationHistory = [conversationHistory[0]];   // Reinicia solo al primer mensaje (el de system)
 };
